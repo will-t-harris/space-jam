@@ -8,5 +8,6 @@
     "noEmit": true,
     "esModuleInterop": true,
     "noUnusedLocals": false
-  }
+  },
+  "exclude": ["node_modules", "public", ".cache"]
 }
