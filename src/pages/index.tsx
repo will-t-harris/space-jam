@@ -2,22 +2,26 @@ import React from "react"
 import logo from "../images/gatsby-icon.png"
 import { Link } from "gatsby"
 import { createGlobalStyle } from "styled-components"
-import colorVariables from '../shared/variables/_colors';
-import '../index.css'
+import colorVariables from "../shared/variables/_colors"
+import Button from "../components/Button"
+import "../index.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const GlobalStyle = createGlobalStyle`
 	body {
-		color: ${props => (props.theme === "home" ? `${colorVariables.lightText}` : `${colorVariables.darkText}`)};
+		color: ${props =>
+      props.theme === "home"
+        ? `${colorVariables.lightText}`
+        : `${colorVariables.darkText}`};
 		background-color: ${colorVariables.homeBackground};
 	}
 `
 
 const IndexPage = () => (
   <Layout>
-	<GlobalStyle theme="home"/>
+    <GlobalStyle theme="home" />
     <SEO title="Home" />
     <div className="container flex flex-col mx-auto px-4 text-center">
       <p className="font-sans">
@@ -33,6 +37,7 @@ const IndexPage = () => (
         euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac
         egestas leo.{" "}
       </p>
+	  <Button />
     </div>
     <Link to="/about/">Go to page 2</Link>
     <Link to="/contact/">Go to contact page</Link>
