@@ -37,7 +37,7 @@ const IndexPage = () => (
         euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac
         egestas leo.{" "}
       </p>
-	  <Button />
+	  <Button theme="default" />
     </div>
     <Link to="/about/">Go to page 2</Link>
     <Link to="/contact/">Go to contact page</Link>
