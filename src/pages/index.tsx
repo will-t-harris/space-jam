@@ -9,13 +9,14 @@ import SEO from "../components/seo"
 
 const GlobalStyle = createGlobalStyle`
 	body {
-		color: ${props => (props.theme === "purple" ? "purple" : "white")};
+		color: ${props => (props.theme === "home" ? "#CD9581" : "#31252A")};
+		background-color: #31252A;
 	}
 `
 
 const IndexPage = () => (
   <Layout>
-    <GlobalStyle theme="purple" />
+	<GlobalStyle theme="home"/>
     <SEO title="Home" />
     <div className="container flex flex-col mx-auto px-4 text-center">
       <p className="font-sans">
@@ -31,7 +32,6 @@ const IndexPage = () => (
         euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac
         egestas leo.{" "}
       </p>
-      <img src={logo} alt="logo" className="mt-12 justify-center" />
     </div>
     <Link to="/about/">Go to page 2</Link>
     <Link to="/contact/">Go to contact page</Link>
