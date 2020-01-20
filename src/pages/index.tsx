@@ -2,6 +2,7 @@ import React from "react"
 import logo from "../images/gatsby-icon.png"
 import { Link } from "gatsby"
 import { createGlobalStyle } from "styled-components"
+import colorVariables from '../shared/variables/_colors';
 import '../index.css'
 
 import Layout from "../components/layout"
@@ -9,8 +10,8 @@ import SEO from "../components/seo"
 
 const GlobalStyle = createGlobalStyle`
 	body {
-		color: ${props => (props.theme === "home" ? "#CD9581" : "#31252A")};
-		background-color: #31252A;
+		color: ${props => (props.theme === "home" ? `${colorVariables.lightText}` : `${colorVariables.darkText}`)};
+		background-color: ${colorVariables.homeBackground};
 	}
 `
 
