@@ -1,5 +1,4 @@
 import React from "react"
-import logo from "../images/gatsby-icon.png"
 import { Link } from "gatsby"
 import { createGlobalStyle } from "styled-components"
 import colorVariables from "../shared/variables/_colors"
@@ -8,6 +7,7 @@ import "../index.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import TextInput from "../components/TextInput"
 
 const GlobalStyle = createGlobalStyle`
 	body {
@@ -37,7 +37,8 @@ const IndexPage = () => (
         euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac
         egestas leo.{" "}
       </p>
-	  <Button theme="default" />
+      <Button theme="default" />
+      <TextInput />
     </div>
     <Link to="/about/">Go to page 2</Link>
     <Link to="/contact/">Go to contact page</Link>
