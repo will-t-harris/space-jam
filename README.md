@@ -1,4 +1,6 @@
-This project is intended to be a spaced-repition app utilizing TypeScript and React.
+This project is intended to be a spaced-repition app utilizing `typescript` and `react`.
+
+At the moment we are using `styled-jsx` as our CSS library.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
