@@ -2,6 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Card from "./components/Card";
+import Clock from "./components/Clock";
 
 const App = () => {
   return (
@@ -20,9 +21,10 @@ const App = () => {
           Learn React
         </a>
       </header>
-	  <body>
-		  <Card title="Welcome!" paragraph="To the example card!" />
-	  </body>
+      <body>
+        <Card title="Welcome!" paragraph="To the example card!" />
+        <Clock />
+      </body>
     </div>
   );
 };

@@ -1,25 +1,17 @@
-import React, { Component } from "react";
+import React, { FunctionComponent, useState, useEffect } from "react";
 
 type ClockState = {
   time: Date;
 };
 
-class Clock extends Component<{}, ClockState> {
-  tick() {
-    this.setState({ time: new Date() });
-  }
+const Clock: FunctionComponent = () => {
+  const [time, setTime] = useState(new Date());
+  const tick = () => setTime(new Date());
 
-  componentWillMount() {
-    this.tick();
-  }
-
-  componentDidMount() {
-    setInterval(() => this.tick(), 1000);
-  }
-
-  render() {
-    return <p>The current time is {this.state.time.toLocaleTimeString()}</p>;
-  }
-}
+  useEffect(() => {
+    tick();
+  }, [time]);
+  return <p>The current time is {time.toLocaleTimeString()}</p>;
+};
 
 export default Clock;
