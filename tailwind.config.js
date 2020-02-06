@@ -7,6 +7,8 @@ module.exports = {
       darkBrown: "#31252A",
       primaryText: "white",
       primaryBackground: "#404040",
+      primaryFooter: "#303030",
+      secondaryFooter: "#292929",
     },
     extend: {},
   },
