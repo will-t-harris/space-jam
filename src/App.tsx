@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "./components/Card";
-import Clock from "./components/Clock";
 import Button from "./components/Button";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
