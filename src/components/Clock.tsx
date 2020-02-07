@@ -9,7 +9,9 @@ const Clock: FunctionComponent = () => {
   const tick = () => setTime(new Date());
 
   useEffect(() => {
-    tick();
+    setTimeout(() => {
+      tick();
+    }, 1000);
   }, [time]);
 
   return (

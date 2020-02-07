@@ -4,6 +4,7 @@ import Button from "./components/Button";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Switch, Route } from "react-router-dom";
+import Clock from "./components/Clock";
 
 const App = () => {
   return (
@@ -12,9 +13,9 @@ const App = () => {
         <Header />
         <Switch>
           <Route path="/clock">
-            <Card title="Clock Title" paragraph="Clock Paragraph" />
+            <Clock />
           </Route>
-          <Route path="/home">
+          <Route path="/">
             <Card title="Card Title" paragraph="Card Paragraph" />
           </Route>
         </Switch>
