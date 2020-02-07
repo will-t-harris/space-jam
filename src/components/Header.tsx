@@ -13,8 +13,8 @@ const Header = () => (
       </span>
     </h1>
     <div className="pt-4 flex flex-col">
-      <Link to="/home">Go Home</Link>
       <Link to="/clock">Go Clock</Link>
+      <Link to="/home">Go Home</Link>
     </div>
   </header>
 );

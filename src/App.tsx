@@ -8,12 +8,12 @@ import { Switch, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="text-center">
-      <Header />
-      <body className="bg-primaryBackground">
+    <body className="bg-primaryBackground">
+      <div className="text-center">
+        <Header />
         <Switch>
           <Route path="/clock">
-            <Clock />
+            <Card title="Clock Title" paragraph="Clock Paragraph" />
           </Route>
           <Route path="/home">
             <Card title="Card Title" paragraph="Card Paragraph" />
@@ -21,8 +21,8 @@ const App = () => {
         </Switch>
         <Button text="test button props" />
         <Footer />
-      </body>
-    </div>
+      </div>
+    </body>
   );
 };
 
