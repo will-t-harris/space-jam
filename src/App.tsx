@@ -1,31 +1,27 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import Card from "./components/Card";
-import Clock from "./components/Clock";
+import Button from "./components/Button";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { Switch, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <body>
-        <Card title="Welcome!" paragraph="To the example card!" />
-        <Clock />
-      </body>
-    </div>
+    <body className="bg-primaryBackground">
+      <div className="text-center">
+        <Header />
+        <Switch>
+          <Route path="/clock">
+            <Card title="Clock Title" paragraph="Clock Paragraph" />
+          </Route>
+          <Route path="/home">
+            <Card title="Card Title" paragraph="Card Paragraph" />
+          </Route>
+        </Switch>
+        <Button text="test button props" />
+        <Footer />
+      </div>
+    </body>
   );
 };
 
