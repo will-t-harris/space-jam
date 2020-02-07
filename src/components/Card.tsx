@@ -8,7 +8,7 @@ type CardProps = {
 const Card: FunctionComponent<CardProps> = ({ title, paragraph, children }) => (
   <aside>
     <h2 className="text-primaryText pt-10">{title}</h2>
-    <p className="text-primaryText">{paragraph}</p>
+    <p className="text-primaryText pb-10">{paragraph}</p>
     {children}
   </aside>
 );
