@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => (
-  <header className="bg-darkBrown p-6 shadow-lg">
-    <h1 className="text-pink">
+  <header className="bg-darkBrown p-6 shadow-lg flex flex-col">
+    <h1 className="text-pink flex-auto">
       <span role="img" aria-label="basketball emoji">
         🏀
       </span>{" "}
@@ -11,6 +12,10 @@ const Header = () => (
         🏀
       </span>
     </h1>
+    <div className="pt-4 flex flex-col">
+      <Link to="/home">Go Home</Link>
+      <Link to="/clock">Go Clock</Link>
+    </div>
   </header>
 );
 

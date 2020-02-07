@@ -11,6 +11,7 @@ const Clock: FunctionComponent = () => {
   useEffect(() => {
     tick();
   }, [time]);
+
   return (
     <p className="text-primaryText">
       The current time is {time.toLocaleTimeString()}
