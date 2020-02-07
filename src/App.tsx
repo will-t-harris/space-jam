@@ -8,20 +8,18 @@ import Clock from "./components/Clock";
 
 const App = () => {
   return (
-    <body className="bg-primaryBackground">
-      <div className="text-center">
-        <Header />
-        <Switch>
-          <Route path="/clock">
-            <Clock />
-          </Route>
-          <Route path="/">
-            <Card title="Card Title" paragraph="Card Paragraph" />
-          </Route>
-        </Switch>
-        <Button text="test button props" />
-        <Footer />
-      </div>
+    <body className="bg-primaryBackground text-center">
+      <Header />
+      <Switch>
+        <Route path="/clock">
+          <Clock />
+        </Route>
+        <Route path="/">
+          <Card title="Card Title" paragraph="Card Paragraph" />
+        </Route>
+      </Switch>
+      <Button text="test button props" />
+      <Footer />
     </body>
   );
 };
