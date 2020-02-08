@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Editor,
   EditorState,
-  RawDraftContentState,
   RichUtils,
   DraftEditorCommand,
+  convertToRaw,
 } from "draft-js";
 import "draft-js/dist/Draft.css";
 import store from "store";
@@ -12,9 +12,10 @@ import store from "store";
 const MyEditor = () => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
 
-  const onSave = (content: RawDraftContentState) => {
-    store.set("entry", content);
-  };
+  useEffect(() => {
+    const rawDraftContentState = convertToRaw(editorState.getCurrentContent());
+    store.set("content", rawDraftContentState);
+  }, [editorState]);
 
   const handleKeyCommand = (
     command: DraftEditorCommand,
@@ -31,11 +32,15 @@ const MyEditor = () => {
   };
 
   return (
-    <Editor
-      editorState={editorState}
-      onChange={setEditorState}
-      handleKeyCommand={handleKeyCommand}
-    />
+    <>
+      <Editor
+        editorState={editorState}
+        onChange={setEditorState}
+        handleKeyCommand={handleKeyCommand}
+        placeholder="Enter text here"
+        textAlignment="center"
+      />
+    </>
   );
 };
 
