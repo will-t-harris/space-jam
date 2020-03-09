@@ -1,18 +1,20 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 import Question from "./Question";
 import QuestionCount from "./QuestionCount";
 import AnswerOption from "./AnswerOption";
 
 type QuizProps = {
+	answer: string;
 	questionId: number;
 	questionTotal: number;
 	question: string;
-	answerOptions: [];
+	answerOptions: { type: string; content: string }[];
 	renderAnswerOptions: () => {};
+	onAnswerSelected: (event: ChangeEvent) => void;
 };
 
 const Quiz = (props: QuizProps) => {
-	const renderAnswerOptions = key => (
+	const renderAnswerOptions = (key: any) => (
 		<AnswerOption
 			key={key.content}
 			answerContent={key.content}
