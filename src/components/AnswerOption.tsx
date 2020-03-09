@@ -1,10 +1,11 @@
-import React from "react";
+import React, { ChangeEvent } from "react";
 
 type AnswerOptionProps = {
 	answerType: string;
 	answerContent: string;
 	answer: string;
-	onAnswerSelected: () => {};
+	questionId: number;
+	onAnswerSelected: (event: ChangeEvent) => void;
 };
 
 const AnswerOption = (props: AnswerOptionProps) => {
@@ -14,7 +15,7 @@ const AnswerOption = (props: AnswerOptionProps) => {
 				type="radio"
 				name="radioGroup"
 				checked={props.answerType === props.answer}
-				id={props.answerType}
+				id={`${props.questionId}`}
 				value={props.answerType}
 				onChange={props.onAnswerSelected}
 			/>
