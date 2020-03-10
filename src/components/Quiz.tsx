@@ -9,7 +9,6 @@ type QuizProps = {
 	questionTotal: number;
 	question: string;
 	answerOptions: { type: string; content: string }[];
-	renderAnswerOptions: () => {};
 	onAnswerSelected: (event: ChangeEvent) => void;
 };
 
